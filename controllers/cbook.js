@@ -1,9 +1,9 @@
 import { ContactModel } from "../models/cbook.js";
 
 //  Get All contacts
-export const getContacts = async (req, res, next) => {
+export const getallContacts = async (req, res, next) => {
     try {
-        const contact = await ContactModel.find()
+        const allcontacts = await ContactModel.find()
         res.status(200).json(allcontacts)
     } catch (error) {
         next(error)
